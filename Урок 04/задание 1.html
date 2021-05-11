@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+//1.
+        /**
+         * Фукция принимает 2 параметра и сохранает их как свойства объекта
+         * @param {string} name название товара
+         * @param {number} price цена товара
+         */
+        /*
+        function Product (name, price) {
+            this.name = name;
+            this.price = price;
+        }
+        */
+
+        /**
+         * Функция метод приняет скидку к обекту
+         */
+        /*
+        Product.prototype.make25PercentDiscount = function () {
+            let percent = 25;
+            let percentPrice = this.price / 100 * percent;
+            this.price += percentPrice;
+            alert(this.price);
+        }
+
+        let product = new Product('apple', 1500);
+        product.make25PercentDiscount();
+        */
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount() {
+                let percent = 25;
+                let percentPrice = this.price / 100 * percent;
+                this.price += percentPrice;
+                alert(this.price);
+            }
+        }
+        let product = new Product('apple', 1500);
+        product.make25PercentDiscount();
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+
+//4. Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+/*параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+и возвращать результат.
+Обязательно использовать оператор return.*/
+
+/**
+ * Функция выполняет сложение чисел 
+ * @param {number} a
+ * @param {number} b
+ * @returns {number}
+ */
+        function sum(a,b){
+                return a + b;
+        }
+        console.log(sum(4, 9))
+
+        function subtraction(a,b){
+                return a - b;
+        }
+        console.log(subtraction(33, 22))
+
+        function multipler(a,b){
+                return a * b;
+        }
+        console.log(multipler(3,4))
+
+        function division(a,b){
+                return a / b;
+        }
+        console.log(division(7,2))
+
+/*5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+переданного значения операции (использовать switch) выполнить одну из арифметических
+операций
+(использовать функции из задания 4) и вернуть полученное значение.*/
+
+        /**
+         * Функция
+         * @param {number} arg1
+         * @param {number} arg2
+         * @param {string} operation
+         * @return {number}
+         */
+
+        function mathOperation(arg1, arg2, operation){
+                switch (operation){
+                        case "+":
+                                return sum(arg1, arg2);
+                        case "-":
+                                return subtraction(arg1, arg2);
+                        case "*":
+                                return multiply(arg1, arg2);
+                        case "/":
+                                return division(arg1, arg2);
+                }
+        }
+        console.log(mathOperation(7, 2, "/"))
+
+    </script>
+</body>
+</html>
